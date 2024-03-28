@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:monospace; 
+}
+body{
+  background-color:rgb(67, 67, 67); 
+
+}
+.header{
+    height:45px;
+    background-color:rgb(67, 67, 67); 
+    position:relative;
+    width:100%;
+
+    /* display:inline-flex;
+    flex-direction: row; */
+}
+header img{
+    height:35px;
+    width:35px; 
+}
+.options{
+    background:transparent;
+    border:transparent;
+    margin-left:auto;
+    border-radius: 25px;
+}
+.options:hover{
+    background:grey;
+    border:grey;
+    box-shadow: 5px 5px 5px whitesmoke;
+}
+.nav{
+    display:inline-flex;
+    flex-direction: row;
+    width:75%;
+   height:35px;
+   flex-grow:1;
+   align-items: center;
+   background-color:rgb(67, 67, 67); 
+}
+
+.main-container{
+  position:relative;
+    width:100%;
+    display:inline-flex;
+    flex-direction:row;
+    height:100%;
+    
+
+}
+.side-panel{
+    position:relative;
+    left:0;
+    bottom:0;
+    width:5%;
+    padding:5px;
+    height:100%;
+    background-color:rgb(67, 67, 67); 
+}
+.main{
+    flex-direction: column;
+    width:75vh;
+    height:100vh;
+    
+}
+.icon-buttons{
+    justify-content: center;
+    height:25px;
+    width:25px;
+}
+
+.options-container{
+    height: 45px;
+    width:25%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color:rgb(67, 67, 67); 
+}
+.profile-buttons{
+    width:50px;
+    height:50px;
+    margin-top:10px;
+    background-color: transparent;
+    border-color: transparent;
+   
+}
+.profile-buttons:hover{   
+    background-color:grey;
+    border:grey;    
+} 
+
+  
+  .calendar {
+    background-color:rgb(50, 50, 50);
+   
+    display:flex;
+    flex-direction: column;
+    width:75%;
+    height:100vh;
+    align-items: center;
+
+  }
+  .emocode{
+    height:25vh;
+    width: 75%;
+    background-color:rgb(87, 87, 87);
+    display:inline-flex;
+    flex-direction:row;
+    padding:15px;
+    margin-top:10px;
+    
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-flex;
+    flex-direction:column;
+    margin-right:50px;
+  }
+  .playlist-container{
+    box-sizing: border-box;
+    background-color:rgb(0, 0, 0); 
+    display:inline-flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    color:white;
+    
+  }
+  .playlist-row{
+    box-sizing: border-box;
+    display:inline-flex;
+    flex-direction:row;
+    width: 100%;
+    height:35%;
+    background-color:rgb(34, 33, 33);
+    padding:3%;
+    /* margin:25px; */
+    align-items: center;
+    margin-top:10px;
+  }
+  .recommendation{
+    height:100vh;
+    width:95%;
+    background-color:#b1b7be;
+ 
+    text-align:center;
+    margin:25px;
+  }
+  #monthDisplay {
+    margin-bottom: 10px;
+  }
+  .emotiondetected{
+    width:150px;
+    height:45px;
+  }
+  .showplaylist{
+    height:80%;
+    width:75%;
+    margin-top:10px;
+    position:absolute;
+  }
+  #calendarContainer {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 2px;
+    width:75vh;
+    /* background-color: #4c4f53; */
+    
+  }
+  .day {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    box-shadow: 5px 5px 5px black;
+    text-align: center;
+    height:45px;
+    background-color:whitesmoke;
+  }
+  
+  #nextBtn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4c4f53;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width:150px;
+  }
+  .emotecontainer{
+   padding:20px;
+
+    width:25%;
+    
+    height:100vh;
+    border:2px dashed black;
+  }
+  .bar{
+   
+    height:45px;
+    width:auto;
+    background-color:black;
+    margin:5px;
+    padding:10px;
+    border-radius:30px;
+  }
+  .emote{
+    height:25px;
+    width:80%;
+    background-color: antiquewhite;
+    border-radius:20px;
+  }
+  .playlist-button{
+    height:150px;
+    width:150px;
+    margin:15px;
+    border-radius:25px;
+  }
+.buttonimg{
+  height:150px;
+  width:150px;
+  border-radius:25px;
+  margin:15px;
+  }
+  

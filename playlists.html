@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<script>
+    function executePythonScript() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:8000/execute_script.php", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Optionally, do something with the response
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+</script> 
+<header class="header">
+    <div class="nav">
+        <h3 style="color:white">library></h3>
+    </div>
+    <div class="options-container">
+    <button class="options" onclick="opennav()"><img src="https://cdn-icons-png.freepik.com/256/552/552848.png"></button>
+</div>
+</header>
+<body>
+<div class="main-container">
+    <div id="sidePanel" class="side-panel">
+    
+           <a href="home.html"> <button class="profile-buttons"><img class="icon-buttons"src="https://static-00.iconduck.com/assets.00/dashboard-icon-2048x2048-smbjyr2w.png"></button></a>
+       
+           <a href="home.html"> <button class="profile-buttons"><img class="icon-buttons" src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/music_library-512.png"></button></a>
+            <button class="profile-buttons" onclick="executePythonScript()"><img class="icon-buttons" src="https://cdn-icons-png.freepik.com/256/1023/1023656.png"></button>
+            <a href="recommendation.html"><button class="profile-buttons"><img class="icon-buttons" src="https://cdn-icons-png.flaticon.com/512/3580/3580329.png"></button></a>
+        </div>
+        <div class="playlist-container">
+            <h3 style="color:white">Music tailored to your emotions</h3>
+            <div class="playlist-row">
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button style="background-color:rgb(26, 138, 138)" class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/564x/c8/fe/2b/c8fe2bfd4c347b22204e68e0b5825328.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">head in clouds</p></div></div> 
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:dimgrey" class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/74/12/14/7412148744233fee9d3e58c95ec15f40.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">All the way Up</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:antiquewhite"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/bd/07/1a/bd071a00a910920c3017fad2e5e4cab6.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">vibe high</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(145, 78, 78)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/e2/8d/6d/e28d6d8661a3a67e6d82cd158432be65.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">goodies</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(65, 28, 99)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/bb/83/c9/bb83c91e3bb4f4f225265f659e283292.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">butterflies</p></div></div>
+   
+           </div>
+           <h3 style="color:white">Your past musical experiences</h3>
+           <div class="playlist-row">
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button style="background-color:rgb(46, 31, 61)" class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/27/f2/42/27f242ffd02d45232a6460fbca5b38fc.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">chill drive</p></div></div> 
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(122, 81, 163)" class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/86/5c/05/865c05ed43a0f120b4f8d77e99247e05.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">high</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(224, 137, 201)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/8f/28/69/8f2869db95338447e2f82e5e155b15c7.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">day off</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(152, 157, 121)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/f9/9f/44/f99f4440320012fc2727eaf3b55345e4.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">vibin' & thrivin</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(27, 4, 230)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/6e/e7/37/6ee7370dd06251287ddf2fb396f7c9fd.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">chill day</p></div></div>
+           </div>
+           <h3 style="color:white">Dive in</h3>
+           <div class="playlist-row">
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(188, 214, 228)" class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/6a/1d/e6/6a1de60f5dc95ce99ae6993016f0cc37.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">relax!</p></div></div> 
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(138, 131, 206)" class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/2c/c5/b0/2cc5b0186b3324386c86026e6eb6425a.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">soulful</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button   style="background-color:rgb(44, 36, 112)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/07/a4/f2/07a4f2c6f866814567d2764ad64f661d.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">In clouds</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(12, 91, 104)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/84/c6/ad/84c6ad094b067d27d244ec61cec44806.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">faraway</p></div></div>
+            <div style="display:flex;flex-direction:column;justify-content: center;"><a href="playlist.html"><button  style="background-color:rgb(8, 5, 40)"class="playlist-button"><img class="buttonimg" src="https://i.pinimg.com/474x/f6/37/bd/f637bd84ebd298a16f1899db562dee1a.jpg"></button></a><div style="text-align:center;margin-top:0px;"><p style="color:white">levitate</p></div></div>
+           </div>
+
+    
+  
+</body>

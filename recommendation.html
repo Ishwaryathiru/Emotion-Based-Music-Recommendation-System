@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header class="header">
+    <div class="nav">
+        <h3>Dashboard></h3>
+    </div>
+    <div class="options-container">
+        <button class="options" onclick="opennav()"><img src="https://cdn-icons-png.freepik.com/256/552/552848.png"></button>
+    </div>
+</header>
+<script>
+    function executePythonScript() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:8000/execute_script.php", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+</script> 
+<body>
+    <div class="body">
+        <div  class="main-container">
+            <div id="sidePanel" class="side-panel">
+                <a href="home.html">
+                <button class="profile-buttons"><img class="icon-buttons"src="https://static-00.iconduck.com/assets.00/dashboard-icon-2048x2048-smbjyr2w.png"></button>
+                </a>
+                <a href="playlists.html"><button class="profile-buttons"><img class="icon-buttons" src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/music_library-512.png"></button></a>
+                <button class="profile-buttons" onclick="executePythonScript()"><img class="icon-buttons" src="https://cdn-icons-png.freepik.com/256/1023/1023656.png"></button>
+                <a href="recommendation.html"><button class="profile-buttons"><img class="icon-buttons" src="https://cdn-icons-png.flaticon.com/512/3580/3580329.png"></button></a>
+            </div>
+            <div class="recommendation">
+                <div class="emotiondetected">
+                    <h3 id="emotionText">sad</h3>
+                    <button style="height:35px;width:100px;background-color:dimgrey;border:1px solid black;" onclick="generatePlaylist()">Generate</button>
+                </div>
+                <center>
+                    <div class="showplaylist">
+                        <iframe class="playlistFrame" id="playlist1" style="border-radius:12px; display:none" src="https://open.spotify.com/embed/playlist/7rGWH3tMJCIhyzde9s5MmF?utm_source=generator" height="450px" width="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe class="playlistFrame" id="playlist2" style="border-radius:12px; display:none" src="https://open.spotify.com/embed/playlist/5uxnFmvdTtKSwzRlrvwR3h?utm_source=generator" height="450px" width="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe class="playlistFrame" id="playlist3" style="border-radius:12px; display:none" src="https://open.spotify.com/embed/playlist/3CDqrZDcgn0phmqpcGaWyZ?utm_source=generator" height="450px" width="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe class="playlistFrame" id="playlist4" style="border-radius:12px; display:none" src="https://open.spotify.com/embed/playlist/2gLZE3J1FkyKzTB8tWF8QC?utm_source=generator" height="450px" width="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <script>
+        function generatePlaylist() {
+            var emotion = document.getElementById("emotionText").innerText.trim().toLowerCase();
+            // Determine which playlist to show based on the emotion
+            var selectedPlaylist;
+            switch (emotion) {
+                case 'happy':
+                    selectedPlaylist = document.getElementById('playlist1');
+                    break;
+                case 'sad':
+                    selectedPlaylist = document.getElementById('playlist2');
+                    break;
+                case 'anxious':
+                    selectedPlaylist = document.getElementById('playlist3');
+                    break;
+                default:
+                    selectedPlaylist = document.getElementById('playlist4');
+            }
+
+            // Hide all playlists and show the selected playlist
+            var playlists = document.querySelectorAll('.playlistFrame');
+            playlists.forEach(function(playlist) {
+                playlist.style.display = 'none';
+            });
+
+            if (selectedPlaylist) {
+                selectedPlaylist.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

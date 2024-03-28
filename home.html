@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<script>
+    function executePythonScript() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:8000/execute_script.php", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+</script> 
+<header class="header">
+    <div class="nav">
+        <h3  style="color:white">Dashboard></h3>
+    </div>
+    <div class="options-container">
+    <button class="options" onclick="opennav()"><img src="https://cdn-icons-png.freepik.com/256/552/552848.png"></button>
+</div>
+</header>
+<body>
+    <div class="body">
+    <div class="main-container">
+        <div id="sidePanel" class="side-panel">
+        
+            <a href="home.html"><button class="profile-buttons"><img class="icon-buttons"src="https://static-00.iconduck.com/assets.00/dashboard-icon-2048x2048-smbjyr2w.png"></button></a>
+           
+                <a href="playlists.html"><button class="profile-buttons"><img class="icon-buttons" src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/music_library-512.png"></button></a>
+            <button class="profile-buttons" onclick="executePythonScript()">
+                <img class="icon-buttons" src="https://cdn-icons-png.freepik.com/256/1023/1023656.png">
+            </button>
+            <a href="recommendation.html"><button class="profile-buttons"><img class="icon-buttons" src="https://cdn-icons-png.flaticon.com/512/3580/3580329.png"></button></a>
+        </div>
+            <div class="calendar">
+                <h2 style="color:white" id="monthDisplay"></h2>
+                <div id="calendarContainer"></div>
+                <button id="nextBtn">Next Month</button>
+                <div class="emocode">
+                  <table>
+
+                  <tr><td><span style="background-color: rgb(75, 114, 196);" class="dot"></span></td>
+                      <td><div style="color:white;text-align:left"><p>sad</p></div></td>
+                  </tr>
+                  <tr><td><span style="background-color: yellow;"class="dot"></span></td>
+                    <td><div style="color:white;text-align:left"><p>happy</p></div></td>
+                </tr>
+                <tr><td><span style="background-color:rgb(175, 216, 133);"class="dot"></span></td>
+                    <td><div style="color:white;text-align:left"><p>anxious</p></div></td>
+                </tr>
+                <tr><td><span style="background-color:rgb(222, 126, 57);" class="dot"></span></td>
+                    <td><div style="color:white;text-align:left"><p>angry</p></div></td>
+                </tr>
+                </table>
+                </div>
+              </div>
+        <div class="emotecontainer">
+            <div class="bar"><div style="background-color: rgb(75, 114, 196);"class="emote"></div></div>
+            <div class="bar"><div style="background-color: yellow;" class="emote"></div></div>
+            <div class="bar"><div style="background-color:rgb(175, 216, 133);" class="emote"></div></div>
+            <div class="bar"><div style="background-color:rgb(222, 126, 57);"  class="emote"></div></div>
+           
+        </div>
+    </div>
+    </div>
+        <script src="dashboard.js"></script>
+</body>
+</html>

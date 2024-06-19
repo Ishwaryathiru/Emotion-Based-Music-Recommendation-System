@@ -40,7 +40,17 @@ LIBRARIES USED : tensorflow, keras, os, cv2, random, from keras layers, numpy
               
 You will be able to see the trained model in the below drive link
 
+ACCURACY : 72%
+
 https://drive.google.com/file/d/1b0LwjEisTNShn4kAbmUh3ehk7toHDShE/view?usp=drive_link 
+
+ACCURACY : 82%
+
+https://drive.google.com/file/d/1Sjc-S9NEDP9bYcXyCgq5xyeO4vDj5hOe/view?usp=sharing
+
+If you are making use of this make a change in emotionrecoginzewithtime.py in the line 
+
+new_model = tf.keras.models.load_model('final_model_ishu2.h5')
 
 **emotionrecognisewithtime.py**
 
